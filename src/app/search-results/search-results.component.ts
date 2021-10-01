@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, HostListener, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-search-results',
@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SearchResultsComponent implements OnInit {
   // use @Input to take in values from the app component
-  results:string = ""
+  @Input('inputResults') results:string[] = [];
+  
   constructor() { }
 
   ngOnInit(): void {

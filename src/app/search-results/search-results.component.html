@@ -1,4 +1,4 @@
-<div class="text-center">
-    <h1>You search for {{results}}
-    </h1>
+<div >
+    <h1 >Search History: </h1>
+    <p *ngFor="let result of results" class="animate" appRandomBackgroundColor>{{result}}</p>
 </div>

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  content: string = "";
+  results: string[] = [];
+
+  getSearchResult(content:string){
+    this.results.push(content)
+  }
 }
